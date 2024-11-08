@@ -53,8 +53,8 @@ jobs:
 
       - name: Login GHCR.io
         run: |
-          echo "run: buildah login -u ${{ github.repository_owner }} -p ${{ secrets.GITHUB_TOKEN }} ghcr.io" 
-          sudo buildah login -u ${{ github.repository_owner }} -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
+          echo "run: buildah login -u ${{ github.repository_owner }} -p ${{ secrets.GH_TOKEN }} ghcr.io" 
+          sudo buildah login -u ${{ github.repository_owner }} -p ${{ secrets.GH_TOKEN }} ghcr.io
 
       - name: Build cluster image
         env:
